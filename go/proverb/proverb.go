@@ -13,7 +13,7 @@ func Proverb(rhyme []string) []string {
 		return proverb
 	}
 
-	for i:= 0; i<size-1; i++{
+	for i:= 0; i<size-1; i++ {
 		line := "For want of a " + rhyme[i] + " the " + rhyme[i+1] + " was lost."
 		proverb[i] = line
 	}
