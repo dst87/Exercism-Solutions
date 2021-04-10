@@ -9,15 +9,17 @@ import "strings"
 func IsIsogram(word string) bool {
 	chars := []rune(strings.ToUpper(word))
 	
-	for i, a := range chars {
+	log := make(map[rune]bool)
+	
+	for _, a := range chars {
 		if a == ' ' || a == '-' {
 			continue
 		}
-		for _, b := range chars[i+1:] {
-			if a == b {
-				return false
-			}
+		_, rpt := log[a]
+		if rpt {
+			return false
 		}
+		log[a] = true
 	}
 	return true
 }
