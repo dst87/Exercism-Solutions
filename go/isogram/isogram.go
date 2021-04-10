@@ -15,8 +15,7 @@ func IsIsogram(word string) bool {
 		if a == ' ' || a == '-' {
 			continue
 		}
-		_, exists := seen[a]
-		if exists {
+		if seen[a] {
 			return false
 		}
 		seen[a] = true
