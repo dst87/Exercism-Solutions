@@ -3,14 +3,11 @@
 // between the two
 package diffsquares
 
-import "math"
-
 // SquareOfSum sums the first N natural numbers, then returns
 // the square of that sum. See:
 // http://mathonline.wikidot.com/a-formula-for-the-sum-of-the-first-n-natural-numbers
 func SquareOfSum(i int) int {
-	f := float64(i)
-	return int(math.Pow(((f*(f+1))/2), 2))
+	return ((i*(i+1))/2) * ((i*(i+1))/2)
 }
 
 // SumOfSquares squares the first N natural numbers, then
